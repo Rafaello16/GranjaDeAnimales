@@ -15,7 +15,27 @@ public abstract class Animal {
     private LocalDate fechaNacimiento;
     private char sexo;
     private double peso;
-
+/**
+ * Constructor de la clase Animal.
+ * 
+ * Crea un nuevo objeto Animal con un código identificativo,
+ * fecha de nacimiento, su sexo y peso.
+ * 
+ * Realiza validaciones sobre los parámetros recibidos:
+ * - El código debe tener exactamente 5 caracteres alfanuméricos en minúscula.
+ * - El sexo debe ser 'M' (hembra) o 'H' (macho).
+ * - El peso debe ser mayor que 0.
+ * - La fecha de nacimiento debe tener formato ISO yyyy-MM-dd.
+ * 
+ * @param codigo código identificativo del animal compuesto por 5 caracteres alfanuméricos
+ * @param fechaNacimiento fecha de nacimiento del animal en formato yyyy-MM-dd
+ * @param sexo sexo del animal, 'M' para hembra o 'H' para macho
+ * @param peso peso del animal en kilogramos, debe ser mayor que 0
+ * 
+ * @throws IllegalArgumentException si el código no cumple el patrón,
+ * si el sexo es incorrecto, si el peso no es positivo
+ * o si la fecha no tiene formato válido
+ */
     public Animal(String codigo, String fechaNacimiento, char sexo, double peso) {
 
         LocalDate fecha;
