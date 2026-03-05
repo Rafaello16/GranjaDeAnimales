@@ -126,15 +126,19 @@ public abstract class Animal {
         }
     }
 /**
+ * Devuelve el peso del animal en kilogramos.
+ *
+ * @return peso del animal (kg)
+ */
+    public double getPeso() {
+        return peso;
+    }
+/**
  * Modifica el peso del animal.
  *
  * @param peso nuevo peso en kilogramos, debe ser mayor que 0
  * @throws IllegalArgumentException si el peso es menor o igual que 0
  */
-    public double getPeso() {
-        return peso;
-    }
-
     public void setPeso(double peso) {
         if (peso <= 0) {
             throw new IllegalArgumentException();
